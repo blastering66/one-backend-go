@@ -73,3 +73,6 @@ __debug_bin
 tmp/
 temp/
 *.tmp
+
+# Go sum (tracked, but regenerated)
+# go.sum
