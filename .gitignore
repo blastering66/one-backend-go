@@ -44,7 +44,7 @@ go.work.sum
 .DS_Store
 
 # Docker
-*.log
+docker-compose.log
 docker-compose.override.yml
 .dockerignore.backup
 Dockerfile.backup
@@ -60,7 +60,7 @@ kubeconfig
 .kube/
 helm/**/charts/
 helm/**/tmpcharts/
-*.tgz
+helm/**/*.tgz
 
 # Development and debugging
 debug
