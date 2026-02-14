@@ -24,9 +24,52 @@ profile.cov
 go.work
 go.work.sum
 
+# Build output
+/bin/
+/dist/
+/build/
+/out/
+
 # env file
 .env
+.env.local
+.env.*.local
 
 # Editor/IDE
-# .idea/
-# .vscode/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Docker
+docker-compose.log
+docker-compose.override.yml
+.dockerignore.backup
+Dockerfile.backup
+.docker/
+
+# Kubernetes
+*.kubeconfig
+kubeconfig
+*.secret.yaml
+*.secret.yml
+*-secret.yaml
+*-secret.yml
+.kube/
+helm/**/charts/
+helm/**/tmpcharts/
+helm/**/*.tgz
+
+# Development and debugging
+debug
+debug.test
+__debug_bin
+*.pprof
+*.prof
+
+# Temporary files
+tmp/
+temp/
+*.tmp
