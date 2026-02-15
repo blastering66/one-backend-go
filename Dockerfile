@@ -25,7 +25,6 @@ RUN apk add --no-cache ca-certificates tzdata
 WORKDIR /app
 
 COPY --from=builder /app/server .
-COPY .env.example .env.example
 
 EXPOSE 8080
 

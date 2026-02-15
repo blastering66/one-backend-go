@@ -1,0 +1,29 @@
+# fly.toml app configuration file generated for one-backend-go-thrumming-meadow-3180 on 2026-02-15T07:36:58+07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'one-backend-go-thrumming-meadow-3180'
+primary_region = 'sin'
+
+[build]
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[env]
+  PORT = "8080"
+  MONGODB_DB = "foodsvc"
+  ACCESS_TOKEN_TTL = "15m"
+  REFRESH_TOKEN_TTL = "720h"
+  CORS_ALLOWED_ORIGINS = "*"
+
+[[vm]]
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 1024
