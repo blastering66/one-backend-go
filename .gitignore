@@ -32,6 +32,8 @@ go.work.sum
 
 # env file
 .env
+.env.production
+.env.example
 .env.local
 .env.*.local
 
