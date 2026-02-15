@@ -1,12 +1,19 @@
-# fly.toml app configuration file generated for one-backend-go-thrumming-meadow-3180 on 2026-02-15T07:36:58+07:00
+# fly.toml app configuration file generated for one-backend-go-polished-forest-4776 on 2026-02-15T09:44:38+07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'one-backend-go-thrumming-meadow-3180'
+app = 'one-backend-go-polished-forest-4776'
 primary_region = 'sin'
 
 [build]
+
+[env]
+  ACCESS_TOKEN_TTL = '15m'
+  CORS_ALLOWED_ORIGINS = '*'
+  MONGODB_DB = 'foodsvc'
+  PORT = '8080'
+  REFRESH_TOKEN_TTL = '720h'
 
 [http_service]
   internal_port = 8080
@@ -15,13 +22,6 @@ primary_region = 'sin'
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
-
-[env]
-  PORT = "8080"
-  MONGODB_DB = "foodsvc"
-  ACCESS_TOKEN_TTL = "15m"
-  REFRESH_TOKEN_TTL = "720h"
-  CORS_ALLOWED_ORIGINS = "*"
 
 [[vm]]
   cpu_kind = 'shared'
